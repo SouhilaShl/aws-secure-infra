@@ -1,0 +1,31 @@
+# Provider and module cache, downloaded by terraform init
+**/.terraform/*
+
+# State files: can contain secrets in plain text
+*.tfstate
+*.tfstate.*
+
+# Variable files: often hold secrets
+*.tfvars
+*.tfvars.json
+
+# Saved plans: can contain sensitive values
+*.tfplan
+tfplan
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Override files, meant to stay local
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI config
+.terraformrc
+terraform.rc
+
+# macOS
+.DS_Store
