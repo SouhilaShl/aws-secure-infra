@@ -14,3 +14,10 @@ resource "aws_subnet" "main" {
     Name = "${var.environment}-subnet"
   }
 }
+resource "aws_default_security_group" "default" {
+  vpc_id = aws_vpc.main.id
+
+  tags = {
+    Name = "${var.environment}-default-sg-restricted"
+  }
+}
