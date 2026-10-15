@@ -3,6 +3,10 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
+  #checkov:skip=CKV_AWS_18:Single-user state bucket; access logging would need a second dedicated log bucket
+  #checkov:skip=CKV_AWS_144:Versioning already protects state history; cross-region replication would double storage cost
+  #checkov:skip=CKV_AWS_145:Bucket is already encrypted at rest with SSE-S3; a customer-managed KMS key adds cost
+  #checkov:skip=CKV2_AWS_62:No consumer exists for bucket event notifications
   bucket = "souhila-tfstate-9102026"
   tags = {
     Name = "terraform state"

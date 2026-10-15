@@ -22,6 +22,8 @@ resource "aws_default_security_group" "default" {
   }
 }
 resource "aws_cloudwatch_log_group" "flow_logs" {
+  #checkov:skip=CKV_AWS_158:Logs are already encrypted at rest by AWS by default; a customer-managed KMS key adds cost not justified for a learning VPC
+
   name              = "/vpc/${var.environment}-flow-logs"
   retention_in_days = 365
 }
