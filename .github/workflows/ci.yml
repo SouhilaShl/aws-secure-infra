@@ -35,3 +35,9 @@ jobs:
         run: |
           terraform init -backend=false
           terraform validate
+      - name: Checkov Iac scan
+        uses: bridgecrewio/checkov-action@6f26dc90000b74feb589a906cdfae540f5119895 #v12.3134.0
+        with:
+          directory:
+          framework: terraform 
+          quiet: true
