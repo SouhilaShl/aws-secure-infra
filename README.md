@@ -28,4 +28,4 @@ Terraform for a small AWS network (VPC, subnet, flow logs) with encrypted remote
 | CKV2_AWS_62 | Nothing consumes bucket events |
 | CKV_AWS_158 | Logs already encrypted by AWS; a KMS key adds cost |
 
-# aws
+
