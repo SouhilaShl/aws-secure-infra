@@ -1,3 +1,6 @@
+# aws-secure-infra
+
+Terraform for a small AWS network (VPC, subnet, flow logs) with encrypted remote state in S3, scanned by Checkov on every pull request.
 ## Security
 
 ### Automated checks on every pull request
